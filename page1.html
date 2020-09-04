@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html >
+<head>
+    
+    <title>Grocery</title>
+<style type="text/css">
+    body{
+        
+        background-color: #B8FFC8;
+    }
+    
+</style>
+</head>
+
+<script type="text/javascript">
+function show(num){
+    
+    var frozenObj = document.getElementById("frozen");
+    var freshObj = document.getElementById("fresh");
+    var baverageObj = document.getElementById("baverage");
+    var homeObj = document.getElementById("home");
+    var petObj = document.getElementById("pet");
+    frozenObj.style.visibility = "hidden";
+    freshObj.style.visibility = "hidden";
+    baverageObj.style.visibility = "hidden";
+    homeObj.style.visibility = "hidden";
+    petObj.style.visibility = "hidden";
+    switch(num){
+        case 1:
+            frozenObj.style.visibility = "visible";
+            break;
+        case 2:
+            freshObj.style.visibility = "visible";
+            break;
+        case 3:
+            baverageObj.style.visibility = "visible";
+            break;
+        case 4:
+            homeObj.style.visibility = "visible";
+            break;
+        case 5:
+            petObj.style.visibility = "visible";
+            break;
+        default:
+            break;        
+    }
+    return true;
+}
+function closeMap(){
+    var frozenObj = document.getElementById("frozen");
+    var freshObj = document.getElementById("fresh");
+    var baverageObj = document.getElementById("baverage");
+    var homeObj = document.getElementById("home");
+    var petObj = document.getElementById("pet");
+   
+    frozenObj.useMap = "#";
+    freshObj.useMap = "#";
+    baverageObj.useMap = "#";
+    homeObj.useMap = "#";
+    petObj.useMap = "#";
+    return true;
+    
+}
+    
+    
+    
+
+</script>
+<body>
+    <table width="100%" height="700px" border="0" align="top">
+    <tr valign="top" height=100%>
+        <td width="50%">
+        <div style="left: 50px;top: 0px;">
+            <img src="img/main.png" width=720px  usemap="#main" id="main">
+            <map name="main">
+            <area shape="rect" coords="6,201,125,258" onmouseover="show(1);">
+            <area shape="rect" coords="145,201,267,258" onmouseover="show(2);">
+            <area shape="rect" coords="280,201,400,258" onmouseover="show(3);">
+            <area shape="rect" coords="420,201,541,258" onmouseover="show(4);">
+            <area shape="rect" coords="555,201,677,258" onmouseover="show(5);">
+            </map>
+            <div align="middle"  style="position:relative">
+                <img src="img/frozen.png" width="720px" id="frozen" usemap="#frozen" style="z-index: 5; visibility:hidden;position: absolute;top: -5px;left: 0px;"/>
+                <map name="frozen">
+                <area shape="rect" coords="8,185,125,245" href="item-info.php?index=1002" target="right_top">
+                <area shape="rect" coords="87,355,205,415" href="item-info.php?index=1000" target="right_top">
+                <area shape="rect" coords="222,355,340,415" href="item-info.php?index=1001" target="right_top">
+                <area shape="rect" coords="282,185,400,245" href="item-info.php?index=1003" target="right_top">
+                <area shape="rect" coords="365,355,480,415" href="item-info.php?index=1004" target="right_top">
+                <area shape="rect" coords="500,355,620,415" href="item-info.php?index=1005" target="right_top">
+                </map>
+                <img src="img/fresh.png" width="720px" id="fresh" usemap="#fresh" style="z-index: 0; visibility:hidden;position: absolute;top: -5px;left: 0px;"/>
+                <map name="fresh" class="immap">
+                <area shape="rect" coords="7,185,99,247" href="item-info.php?index=3002" target="right_top">
+                <area shape="rect" coords="45,360,167,415" href="item-info.php?index=3000" target="right_top">
+                <area shape="rect" coords="180,360,300,415" href="item-info.php?index=3001" target="right_top">
+                <area shape="rect" coords="205,185,295,247" href="item-info.php?index=3003" target="right_top">
+                <area shape="rect" coords="309,185,395,247" href="item-info.php?index=3004" target="right_top">
+                <area shape="rect" coords="408,185,500,247" href="item-info.php?index=3006" target="right_top">
+                <area shape="rect" coords="509,185,600,247" href="item-info.php?index=3007" target="right_top">
+                <area shape="rect" coords="605,185,700,247" href="item-info.php?index=3005" target="right_top">
+                </map>
+                <img src="img/baverage.png" width="720px" id="baverage" usemap="#baverage" style="z-index: 0; visibility:hidden;position: absolute;top: -5px;left: 0;"/>
+                <map name="baverage" class="immap">
+                <area shape="rect" coords="25,350,121,410" href="item-info.php?index=4003" target="right_top">
+                <area shape="rect" coords="128,350,223,410" href="item-info.php?index=4004" target="right_top">
+                <area shape="rect" coords="230,350,322,410" href="item-info.php?index=4000" target="right_top">
+                <area shape="rect" coords="330,350,420,410" href="item-info.php?index=4001" target="right_top">
+                <area shape="rect" coords="430,350,520,410" href="item-info.php?index=4002" target="right_top">
+                <area shape="rect" coords="565,195,685,255" href="item-info.php?index=4005" target="right_top">
+                </map>
+                <img src="img/home.png" width="720px" id="home" usemap="#home" style="z-index: 0; visibility:hidden;position: absolute;top: -5px;left: 0;"/>
+                <map name="home" class="immap">
+                <area shape="rect" coords="8,187,129,245" href="item-info.php?index=2002" target="right_top">
+                <area shape="rect" coords="90,360,210,415" href="item-info.php?index=2000" target="right_top">
+                <area shape="rect" coords="220,360,338,415" href="item-info.php?index=2001" target="right_top">
+                <area shape="rect" coords="280,187,400,245" href="item-info.php?index=2005" target="right_top">
+                <area shape="rect" coords="360,360,480,415" href="item-info.php?index=2003" target="right_top">
+                <area shape="rect" coords="500,360,620,415" href="item-info.php?index=2004" target="right_top">
+                <area shape="rect" coords="555,187,675,245" href="item-info.php?index=2006" target="right_top">
+                </map>
+                <img src="img/pet.png" width="720px" id="pet" usemap="#pet" style="z-index: 0; visibility:hidden;position: absolute;top: -5px;left: 0px;"/>
+                <map name="pet" class="immap">
+                <area shape="rect" coords="148,187,266,245" href="item-info.php?index=5002" target="right_top">
+                <area shape="rect" coords="285,187,403,245" href="item-info.php?index=5003" target="right_top">
+                <area shape="rect" coords="370,357,490,415" href="item-info.php?index=5001" target="right_top">
+                <area shape="rect" coords="502,357,623,415" href="item-info.php?index=5000" target="right_top">
+                <area shape="rect" coords="560,187,681,245" href="item-info.php?index=5004" target="right_top">
+                </map>
+            </div>
+            
+        </div>
+    </td>
+        <td width="50%" height="100%">
+            <div width="100%" height="50%">
+                <iframe src="page2.html" width="100%" height="350" frameborder="0" name="right_top" id="right_top"></iframe>
+            </div>
+            <div width="100%" height="50%">
+                <iframe src="page3.html" width="100%" height="350" frameborder="0" name="right_btm"></iframe>
+            </div>
+    </td>
+    </tr>
+    
+    </table>
+</body>
+</html>
